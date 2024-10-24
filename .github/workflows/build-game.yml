@@ -39,6 +39,9 @@ jobs:
     - uses: krdlab/setup-haxe@master
       with:
         haxe-version: 4.3.4
+    - run: |
+        haxelib install hmm
+        haxelib run hmm install
     - name: Setup HXCPP dev commit
       run: haxelib run lime rebuild hxcpp
     - name: Mobile Configure
