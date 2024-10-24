@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         include:
-        - target: linux
+        - target: android
     runs-on: ubuntu-24.04
     defaults:
       run:
