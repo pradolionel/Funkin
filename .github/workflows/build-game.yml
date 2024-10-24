@@ -40,7 +40,7 @@ jobs:
       with:
         haxe-version: 4.3.4
     - name: Setup HXCPP dev commit
-      run: haxe compile.hxml
+      run: haxelib run lime rebuild hxcpp
     - name: Mobile Configure
       run: |
         haxelib run lime config ANDROID_SDK $ANDROID_HOME
@@ -48,8 +48,7 @@ jobs:
         haxelib run lime config JAVA_HOME $JAVA_HOME_17_X64
         haxelib run lime config ANDROID_SETUP true
     - name: Build game
-      run: |
-        haxelib run lime build ${{ matrix.target }} -v -release --times ${{ github.event.inputs.build-defines }}
+      run: haxelib run lime build ${{ matrix.target }} -v -release --times ${{ github.event.inputs.build-defines }}
       timeout-minutes: 120
     - name: Save build artifact to Github Actions
       if: ${{ github.event.inputs.save-artifact }}
