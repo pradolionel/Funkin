@@ -36,8 +36,9 @@ jobs:
       with:
         submodules: 'recursive'
         persist-credentials: false
-    - name: Setup build environment
-      uses: ./.github/actions/setup-haxe
+    - uses: krdlab/setup-haxe@master
+      with:
+        haxe-version: 4.3.4
     - name: Setup NDK
       uses: nttld/setup-ndk@main
       id: setup-ndk
