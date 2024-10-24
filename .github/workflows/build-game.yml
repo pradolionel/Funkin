@@ -43,7 +43,12 @@ jobs:
         haxelib install hmm
         haxelib run hmm install
     - name: Setup HXCPP dev commit
-      run: haxelib run lime rebuild hxcpp
+      run: |
+        haxelib run lime rebuild hxcpp
+        cd tools/hxcpp
+        haxe compile.hxml
+        cd project
+        neko build.n
     - name: Mobile Configure
       run: |
         haxelib run lime config ANDROID_SDK $ANDROID_HOME
