@@ -121,6 +121,11 @@
       "version": "1.3.0"
     },
     {
+      "name": "extension-androidtools",
+      "type": "haxelib",
+      "version": "2.1.1"
+    },
+    {
       "name": "json2object",
       "type": "git",
       "dir": null,
@@ -145,8 +150,8 @@
       "name": "lime",
       "type": "git",
       "dir": null,
-      "ref": "fe3368f611a84a19afc03011353945ae4da8fffd",
-      "url": "https://github.com/FunkinCrew/lime"
+      "ref": "dev-funkin-arm64",
+      "url": "https://github.com/FunkinDroidTeam/lime"
     },
     {
       "name": "mconsole",
