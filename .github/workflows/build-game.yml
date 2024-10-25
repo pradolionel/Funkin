@@ -23,7 +23,7 @@ jobs:
       matrix:
         include:
         - target: android
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
@@ -38,7 +38,7 @@ jobs:
         persist-credentials: false
     - uses: krdlab/setup-haxe@master
       with:
-        haxe-version: 4.3.4
+        haxe-version: 4.3.6
     - run: |
         haxelib install hmm
         haxelib run hmm install
